@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400|Merriweather:400&display=swap');
+
+$color-primary: #1c00ff;
+$color-accent: #00eb94;
+$color-dark: #131e41;
+$color-white: #fff;
+$box-shadow: 0 15px 45px 0 rgba(139, 140, 185, 0.2);
+$nav-height: 60px;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  list-style: none;
+  border: none;
+  background-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $color-white;
+  font-family: 'Archivo', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-dark;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.4rem;
+  margin: 2.2rem 0;
+}
+
+p {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.4rem;
+  margin: 2.2rem 0;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  padding: 2.2rem 2.5rem;
+  border-radius: 0.2rem;
+  background-color: $color-primary;
+  color: $color-white;
+  font-weight: 700;
+}
+
+.btn:hover,
+.btn:disabled {
+  background-color: #5e49ff;
+}
+
+.nav {
+  height: $nav-height;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - #{$nav-height});
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  width: 100vw;
+  height: calc(100vh - #{$nav-height});
+  padding: 2rem 3rem;
+  box-shadow: $box-shadow;
+  p {
+    text-align: center;
+  }
+}
+
+.form-basic {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+  margin: 1.2rem 0;
+}
+
+.input-basic {
+  height: 6rem;
+  margin-bottom: 0;
+  padding-right: 2.2rem;
+  padding-left: 2.2rem;
+  border-style: none;
+  color: $color-dark;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 0 2rem;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 4.4rem;
+    margin: 2.2rem 0;
+  }
+
+  p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.8rem;
+    margin: 2.2rem 0;
+  }
+  .article {
+    width: 60vw;
+    height: 70vh;
+    padding: 2rem 5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .article {
+    width: 40vw;
+    height: 60vh;
+    padding: 2rem 7rem;
+  }
+}
